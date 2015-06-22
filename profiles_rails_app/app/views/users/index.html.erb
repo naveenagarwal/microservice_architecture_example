@@ -1,0 +1,27 @@
+<h3>Listing Users</h3>
+
+<p><%= link_to "New", new_user_path %></p>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Active</th>
+      <th>Edit</th>
+      <th>Show</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.active? ? "Yes" : "No" %></td>
+        <td><%= link_to "Edit", edit_user_path(user) %></td>
+        <td><%= link_to "Show", user %></td>
+        <td><%= link_to "Destroy", user, method: :delete, confirm: "Are you sure" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
