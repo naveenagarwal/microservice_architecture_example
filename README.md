@@ -3,6 +3,8 @@ It is an example of microservice architecture application created using sinatra 
 
 To run the applicaiton
 
+```ruby
+# config/initializers/her.rb
 cd profile_rails_app
 bundle install
 cd profiles_sinatra_app
@@ -11,3 +13,4 @@ bundle_install
 cd to_cloned_directory
 gem install foreman
 foreman start Procfile
+```
