@@ -11,5 +11,5 @@ bundle_install
 
 cd to_cloned_directory
 gem install foreman
-foreman start Procfile
+foreman start
 ```
